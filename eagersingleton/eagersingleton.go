@@ -1,4 +1,4 @@
-package singleton
+package eagersingleton
 
 type demo struct {
 }
