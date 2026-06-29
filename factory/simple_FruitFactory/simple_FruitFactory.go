@@ -1,13 +1,15 @@
-package factory
+package simpleFF
 
 import (
 	"fmt"
 	"math/rand"
 	"strconv"
 	"time"
+
+	"github.com/tilosrHSZ/go-design-patterns/factory/fruit"
 )
 
-type fruitCreator func(name string) Fruit
+type fruitCreator func(name string) fruit.Fruit
 
 type SimpleFruitFactory struct {
 	creator map[string]fruitCreator
@@ -16,14 +18,14 @@ type SimpleFruitFactory struct {
 func NewSimpleFF() *SimpleFruitFactory {
 	return &SimpleFruitFactory{
 		creator: map[string]fruitCreator{
-			"orange":     NewOrange,
-			"strawberry": NewStrawberry,
-			"cherry":     NewCherry,
+			"orange":     fruit.NewOrange,
+			"strawberry": fruit.NewStrawberry,
+			"cherry":     fruit.NewCherry,
 		},
 	}
 }
 
-func (sf *SimpleFruitFactory) CreateFruit(typ string) (Fruit, error) {
+func (sf *SimpleFruitFactory) CreateFruit(typ string) (fruit.Fruit, error) {
 	fruitCreator, ok := sf.creator[typ]
 	if !ok {
 		return nil, fmt.Errorf("fruit typ: %s is not supported yet.", typ)
