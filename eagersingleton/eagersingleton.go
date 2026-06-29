@@ -8,7 +8,7 @@ func newDemo() *demo {
 }
 
 func (d *demo) DoSomething() string {
-	return "demo is working..."
+	return "eager singleton demo is working..."
 }
 
 type Instance interface {

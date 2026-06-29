@@ -12,7 +12,7 @@ func newDemo() *demo {
 }
 
 func (d *demo) Work() string {
-	return "demo is working..."
+	return "lazy singleton demo is working..."
 }
 
 type Instance interface {
