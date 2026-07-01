@@ -36,5 +36,5 @@ func NewCherryFactory() FruitFactory {
 }
 
 func (c *CherryFactory) CreateFruit() fruit.Fruit {
-	return fruit.NewOrange("")
+	return fruit.NewCherry("")
 }
