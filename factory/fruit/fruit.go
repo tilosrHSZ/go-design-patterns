@@ -19,7 +19,7 @@ func NewOrange(name string) Fruit {
 }
 
 func (o *Orange) Eat() {
-	fmt.Printf("orange: %s is about to be eaten...", o.name)
+	fmt.Printf("orange: %s is about to be eaten...\n", o.name)
 }
 
 type Strawberry struct {
@@ -33,7 +33,7 @@ func NewStrawberry(name string) Fruit {
 }
 
 func (s *Strawberry) Eat() {
-	fmt.Printf("Strawberry: %s is about to be eaten...", s.name)
+	fmt.Printf("Strawberry: %s is about to be eaten...\n", s.name)
 }
 
 type Cherry struct {
@@ -47,5 +47,5 @@ func NewCherry(name string) Fruit {
 }
 
 func (c *Cherry) Eat() {
-	fmt.Printf("Cherry: %s is about to be eaten...", c.name)
+	fmt.Printf("Cherry: %s is about to be eaten...\n", c.name)
 }
